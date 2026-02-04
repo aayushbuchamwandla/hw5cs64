@@ -15,13 +15,13 @@ main:
 	syscall
 	move $t0, $v0
 
+	li  $t5, 1
+	slt $t6, $t5, $t0
+	beq $t6, $zero, exit
+
 	li  $t1, 1
 	li  $t2, 1
 	li  $t3, 2
-
-	li  $t5, 1
-	sltu $t6, $t5, $t0
-	beq  $t6, $zero, exit
 
 	la  $a0, first
 	li  $v0, 4
