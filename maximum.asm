@@ -44,14 +44,14 @@ abs3_done:
 	move $t4, $t0
 
 	slt $t3, $t4, $t1
-	beq $t3, $zero, keep_max12
+	beq $t3, $zero, keep12
 	move $t4, $t1
-keep_max12:
+keep12:
 
 	slt $t3, $t4, $t2
-	beq $t3, $zero, keep_max123
+	beq $t3, $zero, keep123
 	move $t4, $t2
-keep_max123:
+keep123:
 
 	la  $a0, maxstr
 	li  $v0, 4
